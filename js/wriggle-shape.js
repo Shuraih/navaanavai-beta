@@ -744,14 +744,14 @@ var alignObjects = function() {
 
   var container = $('.marshall-container').first();
 
-  ball_top = (window.innerHeight - $('#wriggle-shape canvas').height()) / 2;
-  ball_left = (window.outerWidth - $('#wriggle-shape canvas').width()) / 2;
+  ball_top = ($(window).height() - $('#wriggle-shape canvas').height()) / 2;
+  ball_left = ($(window).width() - $('#wriggle-shape canvas').width()) / 2;
 
   if(container.hasClass('information-open')) {
     ball_left = (container.width() - $('#wriggle-shape canvas').width()) / 2;
   } 
 
-  if(window.innerHeight < 1024) ball_top = '-80px';
+  if($(window).height() < 1024) ball_top = '-80px';
   $("#wriggle-shape canvas").css({
     'left': ball_left,
     'top': ball_top
