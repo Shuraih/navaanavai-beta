@@ -631,14 +631,14 @@ var ballRadius;
 
 if(document.body.clientHeight > document.body.clientWidth) {
 
-  width = Math.floor(window.outerHeight / 2) - window.outerWidth;
+  width = Math.floor($(window).height() / 2) - $(window).width();
 
-  bodyWidth  = (Math.floor(window.outerHeight / 2) - width) - 40;
-  bodyHeight = window.outerHeight - 40;
+  bodyWidth  = (Math.floor($(window).height() / 2) - width) - 40;
+  bodyHeight = $(window).height() - 40;
 
 } else {
-  bodyWidth  = Math.floor(window.innerHeight / 2);
-    bodyHeight = window.innerHeight;
+  bodyWidth  = Math.floor($(window).height() / 2);
+    bodyHeight = $(window).height();
 }
 
 ballRadius = 250;
@@ -813,11 +813,11 @@ var resizeRenderer = function() {
 
 
   if(container.hasClass('information-open')) {
-    bodyWidth  = Math.floor(window.innerHeight / 2);
-    bodyHeight = window.innerHeight;
+    bodyWidth  = Math.floor($(window).height() / 2);
+    bodyHeight = $(window).height();
   } else {
-    bodyWidth  = Math.floor(window.innerHeight / 2);
-    bodyHeight = window.innerHeight;
+    bodyWidth  = Math.floor($(window).height() / 2);
+    bodyHeight = $(window).height();
 
   }
   
