@@ -629,17 +629,8 @@ var globe;
 var ball;
 var ballRadius;
 
-if(document.body.clientHeight > document.body.clientWidth) {
-
-  width = Math.floor($(window).height() / 2) - $(window).width();
-
-  bodyWidth  = (Math.floor($(window).height() / 2) - width) - 40;
-  bodyHeight = $(window).height() - 40;
-
-} else {
-  bodyWidth  = Math.floor($(window).height() / 2);
-    bodyHeight = $(window).height();
-}
+bodyWidth  = Math.floor($(window).height() / 2);
+bodyHeight = $(window).height();
 
 ballRadius = 250;
 
